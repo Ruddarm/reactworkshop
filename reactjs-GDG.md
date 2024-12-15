@@ -41,3 +41,23 @@ my-vite-app/
 ├── vite.config.js
 ├── yarn.lock / package-lock.json  
 </pre>
+- Understand default react home page
+- purpose of folder
+## Installation of react dev too on chorme 
+## Unnderstanding of  JSX
+## Bambel
+## Understanding Component 
+- Basic of Components
+- Hierarchy of Componets (Nested Components)
+- Creating Compoenet Product (activity)
+## Import / Export  of component
+- export defualt
+- export named
+## React Fragment 
+## Adding style to component using CSS file  and JS object 
+## Understanding of Props 
+-  Need of props
+-  Component with props
+-  Handling Props
+-  Updating Product Componenet (activity)
+
