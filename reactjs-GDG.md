@@ -1,7 +1,7 @@
 # React JS 
 ## Why to use to use React JS
-- Example of create product card using html
-- Example of use created product card using JS
+- Example of created product card using html
+- Example of  created product card using JS
 - Disadvantages
   - Repetitive Code
   - Limited Reusability:
