@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>State Management Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 20px;
+    }
+    .product-card {
+      width: 300px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 16px;
+      text-align: center;
+      margin: 16px;
+    }
+    .product-title {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+      color: #333;
+    }
+    .price {
+      font-size: 1.2rem;
+      margin: 16px 0;
+    }
+    .new-price {
+      color: #e63946;
+      font-weight: bold;
+    }
+    .update-button {
+      padding: 8px 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .update-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <!-- Product Cards -->
+  <div class="product-card" id="product-1">
+    <h2 class="product-title">Product 1</h2>
+    <p class="price">
+      Price: <span class="new-price">$100</span>
+    </p>
+    <button class="update-button" onclick="updatePrice(1, 120)">Update Price</button>
+  </div>
+
+  <div class="product-card" id="product-2">
+    <h2 class="product-title">Product 2</h2>
+    <p class="price">
+      Price: <span class="new-price">$200</span>
+    </p>
+    <button class="update-button" onclick="updatePrice(2, 180)">Update Price</button>
+  </div>
+
+  <!-- Script -->
+  <script>
+    function updatePrice(productId, newPrice) {
+      // Update the price of the product
+      const productCard = document.getElementById(`product-${productId}`);
+      const priceElement = productCard.querySelector(".new-price");
+      priceElement.textContent = `$${newPrice}`;
+
+      // Simulate re-rendering the entire UI (inefficient)
+      reRenderUI();
+    }
+
+    function reRenderUI() {
+      // Inefficient: Re-render all product cards manually
+      const products = [
+        { id: 1, title: "Product 1", price: 120 },
+        { id: 2, title: "Product 2", price: 180 },
+      ];
+
+      // Clear and re-create the UI
+      document.body.innerHTML = "";
+      products.forEach((product) => {
+        const card = document.createElement("div");
+        card.className = "product-card";
+        card.id = `product-${product.id}`;
+        card.innerHTML = `
+          <h2 class="product-title">${product.title}</h2>
+          <p class="price">Price: <span class="new-price">$${product.price}</span></p>
+          <button class="update-button" onclick="updatePrice(${product.id}, ${product.price + 10})">Update Price</button>
+        `;
+        document.body.appendChild(card);
+      });
+    }
+  </script>
+</body>
+</html>

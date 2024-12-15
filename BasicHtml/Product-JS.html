@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Card</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 20px;
+    }
+    .product-card {
+      width: 300px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 16px;
+      text-align: center;
+      margin: 16px;
+    }
+    .product-title {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+      color: #333;
+    }
+    .product-description {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 16px 0;
+    }
+    .product-description li {
+      margin-bottom: 8px;
+      color: #555;
+    }
+    .price {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: #888;
+      margin-right: 8px;
+    }
+    .new-price {
+      color: #e63946;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    // Product data
+    const products = [
+      {
+        title: "Product 1",
+        description: ["High quality", "Durable material", "Affordable price"],
+        oldPrice: "$100",
+        newPrice: "$75",
+      },
+      {
+        title: "Product 2",
+        description: ["Compact design", "Eco-friendly", "Best value"],
+        oldPrice: "$150",
+        newPrice: "$120",
+      },
+      {
+        title: "Product 3",
+        description: ["Lightweight", "Modern look", "High performance"],
+        oldPrice: "$200",
+        newPrice: "$180",
+      },
+      {
+        title:"Product 4",
+        title: "Product 3",
+        description: ["Lightweight", "Modern look", "High performance"],
+        oldPrice: "$200",
+        newPrice: "$180",
+      }
+    ];
+
+    // Function to create a product card
+    function createProductCard(product) {
+      // Create the card container
+      const card = document.createElement("div");
+      card.className = "product-card";
+
+      // Add product title
+      const title = document.createElement("h2");
+      title.className = "product-title";
+      title.textContent = product.title;
+      card.appendChild(title);
+
+      // Add product description
+      const descriptionList = document.createElement("ul");
+      descriptionList.className = "product-description";
+      product.description.forEach((item) => {
+        const listItem = document.createElement("li");
+        listItem.textContent = item;
+        descriptionList.appendChild(listItem);
+      });
+      card.appendChild(descriptionList);
+
+      // Add price
+      const price = document.createElement("p");
+      price.className = "price";
+
+      const oldPrice = document.createElement("span");
+      oldPrice.className = "old-price";
+      oldPrice.textContent = product.oldPrice;
+
+      const newPrice = document.createElement("span");
+      newPrice.className = "new-price";
+      newPrice.textContent = product.newPrice;
+
+      price.appendChild(oldPrice);
+      price.appendChild(newPrice);
+      card.appendChild(price);
+
+      return card;
+    }
+
+    // Render product cards to the page
+    const body = document.body;
+    products.forEach((product) => {
+      const card = createProductCard(product);
+      body.appendChild(card);
+    });
+  </script>
+</body>
+</html>
