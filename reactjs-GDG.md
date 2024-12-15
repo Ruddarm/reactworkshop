@@ -62,7 +62,7 @@ my-vite-app/
 -  Passing array and object
 -  using Map
 -  Updating Product Componenet (activity)
-##  onditional rendering of component 
+## Conditional rendering of component 
 ## Event handling 
 -  click
 -  non click
