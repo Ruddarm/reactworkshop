@@ -59,5 +59,22 @@ my-vite-app/
 -  Need of props
 -  Component with props
 -  Handling Props
+-  Passing array and object
+-  using Map
 -  Updating Product Componenet (activity)
+##  onditional rendering of component 
+## Event handling 
+-  click
+-  non click
+-  event Object
+
+## Understanding need of react state.
+1.  Usestate
+  - Example on use state
+  - counter app (activity)
+2.  useref
+    Example and small activity
+3. useEffect
+    Example and small activit
+## Form in react js ( Activity  3 ) 
 
