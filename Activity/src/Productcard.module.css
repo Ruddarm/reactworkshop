@@ -1,0 +1,47 @@
+.productcard {
+    width: 200px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    text-align: center;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+  }
+  .producttitle {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  .productdescription {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px 0;
+  }
+  .productdescription li {
+    margin-bottom: 8px;
+    color: #555;
+  }
+  .price {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  .oldprice {
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 8px;
+  }
+  .newprice {
+    color: #e63946;
+    font-weight: bold;
+  }
+  .Container{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+
+  }

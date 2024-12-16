@@ -1,0 +1,13 @@
+.Header{
+    width: 100%;
+    background-color: rgb(55, 87, 87);
+    color: white;
+    margin: 0;
+    height: 50px;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+}
+.Header h1{
+    margin: 0;
+}
