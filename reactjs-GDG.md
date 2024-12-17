@@ -55,6 +55,57 @@ my-vite-app/
 - export named
 ## React Fragment 
 ## Adding style to component using CSS file  and JS object 
+#Inline Styling 
+```jsx
+import React from 'react';
+
+function InlineStyleExample() {
+  return (
+    <div>
+      <h1 style={{ color: 'blue', fontSize: '24px', textAlign: 'center' }}>
+        Inline Styling Example
+      </h1>
+      <p style={{ backgroundColor: 'lightgray', padding: '10px' }}>
+        This paragraph is styled using inline CSS in React.
+      </p>
+    </div>
+  );
+}
+
+export default InlineStyleExample;
+````
+# External Css
+```jsx
+import React from 'react';
+import './App.css'; // Importing the external CSS file
+
+function ExternalStyleExample() {
+  return (
+    <div>
+      <h1 className="header">External Styling Example</h1>
+      <p className="paragraph">
+        This paragraph is styled using an external CSS file in React.
+      </p>
+    </div>
+  );
+}
+
+export default ExternalStyleExample;
+```
+```Css
+/* App.css */
+.header {
+  color: green;
+  font-size: 24px;
+  text-align: center;
+}
+
+.paragraph {
+  background-color: lightyellow;
+  padding: 10px;
+}
+```
+
 ## Understanding of Props 
 -  Need of props
 -  Component with props
